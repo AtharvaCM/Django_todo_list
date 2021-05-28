@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pxhiimax',
-        'USER': 'pxhiimax',
-        'PASSWORD': 'ce3b5ShFMwCjFTjIa8YN0YBHo9tL5nyR',
-        'HOST': 'satao.db.elephantsql.com',
-        'PORT': '',
+        # 'NAME': 'pxhiimax',
+        # 'USER': 'pxhiimax',
+        # 'PASSWORD': 'ce3b5ShFMwCjFTjIa8YN0YBHo9tL5nyR',
+        # 'HOST': 'satao.db.elephantsql.com',
+        # 'PORT': '',
     }
 }
 
