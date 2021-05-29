@@ -16,21 +16,21 @@ import os
 import dj_database_url
 from pathlib import Path
 
-import environ
-env = environ.Env(
-    DEBUG=(bool, False)
-)
+# import environ
+# env = environ.Env(
+#     DEBUG=(bool, False)
+# )
 
-READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', False)
-if READ_DOT_ENV_FILE:
-    environ.Env.read_env()
+# READ_DOT_ENV_FILE = env.bool('READ_DOT_ENV_FILE', False)
+# if READ_DOT_ENV_FILE:
+#     environ.Env.read_env()
 # environ.Env.read_env()
 
 # False if not in os.environ
-DEBUG = env('DEBUG')
+DEBUG = False
 
 # Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = 'django-insecure-@oogemc$@#fy=h^70rdrmhta&4ou76)b4mjk7wqhtt72jm2eoo'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -61,7 +61,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'todo_list.urls'
@@ -92,11 +92,11 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'PORT': env("DB_PORT"),
+        # 'NAME':
+        # 'USER':
+        # 'PASSWORD':
+        # 'HOST':
+        # 'PORT':
     }
 }
 
