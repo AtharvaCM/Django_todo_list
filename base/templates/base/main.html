@@ -31,12 +31,13 @@
             color: #4b5156
         }
 
-        .container {
+        .main-container {
             max-width: 550px;
             margin: auto;
             background-color: white;
             -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
             box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+            margin-bottom: 40px;
         }
 
         .header-bar {
@@ -140,7 +141,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="main-container">
         {% block content %}
         {% endblock %}
     </div>
