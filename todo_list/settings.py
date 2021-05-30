@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME':
+        'NAME': 'postgresql-symmetrical-41304'
         # 'USER':
         # 'PASSWORD':
         # 'HOST':
