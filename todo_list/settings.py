@@ -92,13 +92,12 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd3g52f2spt4h38'
-    }
-}
-DATABASE_URL = 'postgres://odugeyfhvqwcuh:89631e4b96ed8e36d3c1806cac5457dd84abb6bcfc893746cdeb124bab1f2bcb@ec2-54-155-226-153.eu-west-1.compute.amazonaws.com:5432/d3g52f2spt4h38'
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': '',
+#     }
+# }
 
 # DATABASES = {
 #     'default': {
@@ -111,15 +110,15 @@ DATABASE_URL = 'postgres://odugeyfhvqwcuh:89631e4b96ed8e36d3c1806cac5457dd84abb6
 #     }
 # }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 
 # Password validation
