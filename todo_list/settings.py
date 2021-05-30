@@ -98,6 +98,7 @@ DATABASES = {
         'NAME': 'd3g52f2spt4h38'
     }
 }
+DATABASE_URL = 'postgres://odugeyfhvqwcuh:89631e4b96ed8e36d3c1806cac5457dd84abb6bcfc893746cdeb124bab1f2bcb@ec2-54-155-226-153.eu-west-1.compute.amazonaws.com:5432/d3g52f2spt4h38'
 
 # DATABASES = {
 #     'default': {
