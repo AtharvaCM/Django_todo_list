@@ -96,12 +96,19 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgresql-symmetrical-41304'
-        # 'USER':
-        # 'PASSWORD':
-        # 'HOST':
-        # 'PORT':
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'todolist',
+#         'USER': 'todolistuser',
+#         'PASSWORD': 'todolist1234',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
