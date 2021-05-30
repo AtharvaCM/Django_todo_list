@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'todo_list.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': 'd3g52f2spt4h38'
+        'NAME': ''
     }
 }
 
@@ -110,8 +110,8 @@ DATABASES = {
 #     }
 # }
 
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+DATABASES['default'] = dj_database_url.config(
+    conn_max_age=600, ssl_require=True)
 
 # DATABASES = {
 #     'default': {
